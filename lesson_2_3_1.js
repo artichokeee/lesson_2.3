@@ -27,9 +27,14 @@ for (elementKey in players) {
   scorePoints.push(players[elementKey].scorePoints);
 }
 
-console.log(scorePoints);
+let maxScorePoint = Math.max(...scorePoints);
 
-console.log(`The max score point is ${Math.max(...scorePoints)}`);
+function maxScorePlayer(array) {
+  object = array.find(item => item.scorePoints === maxScorePoint)
+  return object.name
+}
+
+console.log(`The player with a max score point is ${maxScorePlayer(players)}`);
 
 // задание 2.3.1.2
 
